@@ -231,8 +231,9 @@ a:hover {
 }
 
 .btn-primary:hover {
-  background: var(--ink-blue);
-  border-color: var(--ink-blue);
+  background: var(--paper-bg);
+  color: var(--ink-black);
+  border-color: var(--ink-black);
 }
 
 /* Hand-drawn button style */
