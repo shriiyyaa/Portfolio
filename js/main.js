@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ========== HERO TYPEWRITER EFFECT ==========
   const heroHighlight = document.querySelector('.hero-title .highlight');
   if (heroHighlight) {
-    const text = "design, research, & build";
+    const text = "intelligent digital systems.";
     heroHighlight.textContent = "";
 
     let i = 0;
