@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none" stroke="#2D2A26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Magnifying glass circle -->
+  <circle cx="24" cy="24" r="18" fill="#FAF8F5" stroke-width="2"/>
+  <!-- Glass shine -->
+  <path d="M14 16 Q18 12, 24 14" stroke="#4A7BBA" stroke-width="1"/>
+  <!-- Handle -->
+  <path d="M38 38 L55 55" stroke-width="4" stroke="#5A9E6F"/>
+  <path d="M38 38 L55 55" stroke-width="2" stroke="#2D2A26"/>
+  <!-- Inner details -->
+  <circle cx="24" cy="24" r="12" stroke="#4A7BBA" stroke-width="1" stroke-dasharray="3 3"/>
+  <!-- Eye/analysis symbol inside -->
+  <ellipse cx="24" cy="24" rx="6" ry="4" stroke="#4A7BBA"/>
+  <circle cx="24" cy="24" r="2" fill="#4A7BBA"/>
+</svg>

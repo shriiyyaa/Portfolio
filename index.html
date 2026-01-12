@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Shriya Nayyar | Designer, Researcher, AI Engineer</title>
+  <meta name="description"
+    content="I build intelligent digital systems. UI/UX Designer, Product Researcher, and AI-driven Full-Stack Engineer crafting human-centered technology.">
+  <meta name="author" content="Shriya Nayyar">
+  <meta name="keywords" content="UI/UX Designer, Product Research, AI Engineer, Full-Stack Developer, Portfolio">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Shriya Nayyar | Designer, Researcher, AI Engineer">
+  <meta property="og:description"
+    content="I build intelligent digital systems that start with human understanding and end as real, working products.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-indicator" id="scrollIndicator"></div>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero section" id="hero">
+    <!-- Decorative Doodles -->
+    <img src="assets/doodles/mushroom.svg" alt="" class="doodle doodle-mushroom doodle-float" aria-hidden="true">
+    <img src="assets/doodles/cat.svg" alt="" class="doodle doodle-cat doodle-wiggle" aria-hidden="true">
+    <img src="assets/doodles/star.svg" alt="" class="doodle doodle-star-1 doodle-float" aria-hidden="true">
+    <img src="assets/doodles/star.svg" alt="" class="doodle doodle-star-2 doodle-float" style="animation-delay: -2s;"
+      aria-hidden="true">
+    <img src="assets/doodles/chick.svg" alt="" class="doodle doodle-chick doodle-sway" aria-hidden="true">
+    <img src="assets/doodles/flower.svg" alt="" class="doodle doodle-flower doodle-float"
+      style="bottom: 30%; left: 5%; width: 45px;" aria-hidden="true">
+
+    <div class="hero-content">
+      <h1 class="hero-headline">I build intelligent digital systems.</h1>
+      <p class="hero-tagline">
+        <span>Design</span>
+        <span>Research</span>
+        <span>AI</span>
+        <span>Engineering</span>
+      </p>
+
+      <!-- Decorative Arrow -->
+      <div class="hero-arrow">
+        <svg width="60" height="40" viewBox="0 0 60 40" fill="none" stroke="#4A7BBA" stroke-width="2"
+          stroke-linecap="round">
+          <path d="M5 15 Q30 5, 55 20" />
+          <path d="M48 14 L55 20 L50 28" />
+        </svg>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#systems" class="btn">
+          <span>Explore My Systems</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7" />
+          </svg>
+        </a>
+        <a href="#casestudies" class="btn btn-primary">
+          <span>Explore My Case Studies</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-photo-wrapper">
+          <div class="about-photo">
+            <img src="assets/profile-garden.jpg" alt="Shriya Nayyar">
+            <div class="about-photo-frame"></div>
+          </div>
+          <!-- Decorative doodles near photo -->
+          <img src="assets/doodles/star.svg" alt="" class="doodle doodle-float"
+            style="top: -20px; right: -30px; width: 30px;" aria-hidden="true">
+          <img src="assets/doodles/flower.svg" alt="" class="doodle doodle-sway"
+            style="bottom: -10px; left: -20px; width: 35px;" aria-hidden="true">
+        </div>
+
+        <div class="about-text">
+          <p class="about-statement">
+            I'm Shriya Nayyar. I care about how people feel, how systems think, and how technology can bring the two
+            together.
+          </p>
+          <p class="about-bio">
+            I'm a multidisciplinary designer and engineer from India who believes the best products are born where human
+            empathy meets intelligent systems. I don't just design interfaces or write code. I connect research,
+            experience, data, and machine intelligence into living systems that solve meaningful problems.
+          </p>
+          <p class="about-bio">
+            When I'm not building, you'll find me sketching ideas, exploring new AI papers, or thinking about how to
+            make technology feel more human.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SYSTEMS SECTION ========== -->
+  <section class="section" id="systems">
+    <div class="container">
+      <header class="section-header">
+        <h2>Systems I've Built</h2>
+        <p style="color: var(--ink-gray); margin-top: 1rem; font-size: 1.1rem;">
+          Things that run, think, compute, and predict.
+        </p>
+      </header>
+
+      <div class="systems-grid">
+        <!-- MoodMuse -->
+        <article class="system-card reveal">
+          <div class="system-icon">
+            <img src="assets/doodles/headphones.svg" alt="Headphones icon">
+          </div>
+          <span class="badge badge-live">Live</span>
+          <h3>MoodMuse</h3>
+          <p class="system-subtitle">Emotion-First Music Companion</p>
+          <p class="system-description">
+            An emotion-aware music system that asks: "How do you feel right now?" Users describe their mood with text
+            and emojis, and a custom emotion engine converts this into an 8-dimensional Mood Vector. Songs are matched
+            using vector-similarity, and an Intent Layer (Stay, Lift, Distract, Surprise) adapts in real-time based on
+            skips.
+          </p>
+          <div class="system-tech">
+            <span class="tag tag-blue">Next.js 14</span>
+            <span class="tag tag-green">TypeScript</span>
+            <span class="tag">Zustand</span>
+            <span class="tag">YouTube API</span>
+          </div>
+          <div class="system-links">
+            <a href="https://github.com/shriiyyaa/MoodMuse" target="_blank" rel="noopener"
+              class="system-link-btn btn-github">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+              GitHub
+            </a>
+            <a href="https://mood-muse-zeta.vercel.app/" target="_blank" rel="noopener"
+              class="system-link-btn btn-live">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <path
+                  d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+              Live Demo
+            </a>
+          </div>
+        </article>
+
+        <!-- PortLens -->
+        <article class="system-card reveal reveal-delay-1">
+          <div class="system-icon">
+            <img src="assets/doodles/magnifying-glass.svg" alt="Magnifying glass icon">
+          </div>
+          <span class="badge badge-live">Live</span>
+          <h3>PortLens</h3>
+          <p class="system-subtitle">AI Portfolio Evaluation Platform</p>
+          <p class="system-description">
+            An AI-powered system that replaces unpaid design assignments with automated, evidence-based portfolio
+            analysis. PortLens uses a Vision Encoder + NLP Encoder fusion engine to evaluate visual design, UX
+            heuristics, and communication clarity. Designers get actionable feedback; recruiters get ranked shortlists
+            with explanations.
+          </p>
+          <div class="system-tech">
+            <span class="tag tag-blue">React</span>
+            <span class="tag tag-green">FastAPI</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">PyTorch</span>
+          </div>
+          <div class="system-links">
+            <a href="https://github.com/shriiyyaa/PortLens" target="_blank" rel="noopener"
+              class="system-link-btn btn-github">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+              GitHub
+            </a>
+            <a href="https://port-lens.vercel.app/" target="_blank" rel="noopener" class="system-link-btn btn-live">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <path
+                  d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+              Live Demo
+            </a>
+          </div>
+        </article>
+
+        <!-- WorkQueue -->
+        <article class="system-card reveal reveal-delay-2">
+          <div class="system-icon">
+            <img src="assets/doodles/conveyor.svg" alt="Conveyor belt icon">
+          </div>
+          <span class="badge badge-dev">In Development</span>
+          <h3>WorkQueue</h3>
+          <p class="system-subtitle">Distributed Background Job Processing System</p>
+          <p class="system-description">
+            A C++ distributed system that receives tasks via HTTP, stores them in Redis, and executes them using
+            background worker processes. Features Producer-Queue-Worker architecture, multithreading, and scalable
+            design used by real production systems.
+          </p>
+          <div class="system-tech">
+            <span class="tag tag-red">C++</span>
+            <span class="tag">Crow</span>
+            <span class="tag">Redis</span>
+            <span class="tag">CMake</span>
+          </div>
+          <div class="system-links">
+            <span class="system-link-btn btn-coming">Coming Soon</span>
+          </div>
+        </article>
+
+        <!-- Heart Disease Predictor -->
+        <article class="system-card reveal reveal-delay-3">
+          <div class="system-icon">
+            <img src="assets/doodles/heart.svg" alt="Heart icon">
+          </div>
+          <span class="badge badge-dev">In Development</span>
+          <h3>Heart Disease Predictor</h3>
+          <p class="system-subtitle">ML-Powered Decision Support System</p>
+          <p class="system-description">
+            A complete ML pipeline that predicts cardiovascular risk from medical data. Trained on UCI Heart Disease
+            dataset, compared 5 algorithms, and selected Logistic Regression for interpretability. Deployed via
+            Streamlit with probability outputs, gauge charts, and radar visualizations for explainable AI.
+          </p>
+          <div class="system-tech">
+            <span class="tag tag-blue">Python</span>
+            <span class="tag tag-green">Scikit-learn</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Plotly</span>
+          </div>
+          <div class="system-links">
+            <span class="system-link-btn btn-coming">Coming Soon</span>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Decorative doodles -->
+    <img src="assets/doodles/star.svg" alt="" class="doodle doodle-float" style="top: 10%; right: 5%; width: 35px;"
+      aria-hidden="true">
+  </section>
+
+  <!-- ========== EXPERIENCE SECTION ========== -->
+  <section class="section" id="experience">
+    <div class="container">
+      <header class="section-header">
+        <h2>Experience</h2>
+        <p style="color: var(--ink-gray); margin-top: 1rem; font-size: 1.1rem;">
+          Where I've applied my skills in the real world.
+        </p>
+      </header>
+
+      <div class="experience-card reveal">
+        <div class="experience-header">
+          <div class="experience-icon" style="background: #fff; padding: 8px;">
+            <img src="assets/tinywires-logo.png" alt="TinyWires Logo"
+              style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <div class="experience-meta">
+            <h3>TinyWires Labs</h3>
+            <p class="experience-role">Design & Development Intern</p>
+            <p class="experience-duration">March 2025 - June 2025</p>
+          </div>
+        </div>
+        <p class="experience-description">
+          Worked on website design and development for a STEM education company creating hands-on robotics and
+          electronics kits. Contributed to making complex technology accessible and exciting for students through
+          thoughtful design and user experience.
+        </p>
+        <div class="experience-tags">
+          <span class="tag tag-blue">Web Design</span>
+          <span class="tag tag-green">Development</span>
+          <span class="tag">UI/UX</span>
+          <span class="tag">STEM Education</span>
+        </div>
+        <a href="https://www.tinywires.com/" target="_blank" rel="noopener" class="system-link-btn btn-live">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <path
+              d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg>
+          View Live Site
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CASE STUDIES SECTION ========== -->
+  <section class="section" id="casestudies"
+    style="background: linear-gradient(180deg, transparent 0%, rgba(245,240,232,0.3) 100%);">
+    <div class="container">
+      <header class="section-header">
+        <h2>Case Studies</h2>
+        <p style="color: var(--ink-gray); margin-top: 1rem; font-size: 1.1rem;">
+          Where research and design thinking come alive.
+        </p>
+      </header>
+
+      <div class="casestudies-grid">
+        <!-- Red Bull Redesign -->
+        <article class="casestudy-card reveal">
+          <div class="casestudy-image" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" stroke="#C25B5B" stroke-width="2">
+              <circle cx="40" cy="40" r="30" />
+              <path d="M25 40 L40 25 L55 40 L40 55 Z" />
+            </svg>
+          </div>
+          <span class="casestudy-annotation">Energy meets elegance ⚡</span>
+          <div class="casestudy-content">
+            <h3>Red Bull Website Redesign</h3>
+            <p class="casestudy-type">UI/UX Case Study</p>
+            <p class="casestudy-description">
+              A complete reimagining of Red Bull's digital presence. From user research to final interface, exploring
+              how an energy brand can feel both powerful and refined in the digital space.
+            </p>
+            <div class="casestudy-tags">
+              <span class="tag tag-blue">User Research</span>
+              <span class="tag tag-green">UI Design</span>
+              <span class="tag">Branding</span>
+            </div>
+            <a href="https://www.behance.net/gallery/230598951/RED-BULL-WEBSITE-REDESIGN-A-UIUX-Case-Study"
+              target="_blank" rel="noopener" class="system-link-btn btn-github">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                <path
+                  d="M7.5 11c1.5 0 2.5-.8 2.5-2.2 0-1.5-1-2.3-2.5-2.3H4v4.5h3.5zM4 12.5v5h4c1.7 0 2.8-1 2.8-2.5s-1.1-2.5-2.8-2.5H4zM14 6.5h6v1.5h-6V6.5zm3 4c-2.2 0-4 1.8-4 4s1.8 4 4 4a4 4 0 003.5-2h-2c-.4.6-1 1-1.8 1-1.1 0-2-.9-2-2h6c0-2.8-1.8-5-4-5z" />
+              </svg>
+              View on Behance
+            </a>
+          </div>
+        </article>
+
+        <!-- BiteCraft -->
+        <article class="casestudy-card reveal reveal-delay-1">
+          <div class="casestudy-image" style="background: linear-gradient(135deg, #ff9a56 0%, #ff6b35 100%);">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" stroke="#FAF8F5" stroke-width="2">
+              <ellipse cx="40" cy="45" rx="25" ry="20" />
+              <path d="M25 35 Q40 20, 55 35" />
+              <circle cx="32" cy="45" r="3" fill="#FAF8F5" />
+              <circle cx="48" cy="45" r="3" fill="#FAF8F5" />
+            </svg>
+          </div>
+          <span class="casestudy-annotation">Deliciously designed 🍔</span>
+          <div class="casestudy-content">
+            <h3>BiteCraft</h3>
+            <p class="casestudy-type">Food App Design</p>
+            <p class="casestudy-description">
+              A food ordering app that makes choosing what to eat as delightful as eating itself. Focused on reducing
+              decision fatigue while celebrating the joy of discovery.
+            </p>
+            <div class="casestudy-tags">
+              <span class="tag tag-blue">Mobile App</span>
+              <span class="tag tag-green">UX Flow</span>
+              <span class="tag">Wireframes</span>
+            </div>
+            <a href="https://www.behance.net/gallery/215823527/BiteCraft" target="_blank" rel="noopener"
+              class="system-link-btn btn-github">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                <path
+                  d="M7.5 11c1.5 0 2.5-.8 2.5-2.2 0-1.5-1-2.3-2.5-2.3H4v4.5h3.5zM4 12.5v5h4c1.7 0 2.8-1 2.8-2.5s-1.1-2.5-2.8-2.5H4zM14 6.5h6v1.5h-6V6.5zm3 4c-2.2 0-4 1.8-4 4s1.8 4 4 4a4 4 0 003.5-2h-2c-.4.6-1 1-1.8 1-1.1 0-2-.9-2-2h6c0-2.8-1.8-5-4-5z" />
+              </svg>
+              View on Behance
+            </a>
+          </div>
+        </article>
+
+        <!-- Boat Management App -->
+        <article class="casestudy-card reveal reveal-delay-2">
+          <div class="casestudy-image" style="background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" stroke="#FAF8F5" stroke-width="2">
+              <path d="M15 50 Q40 35, 65 50" />
+              <path d="M20 50 L25 65 L55 65 L60 50" />
+              <path d="M40 30 L40 50" />
+              <path d="M40 30 L55 40 L40 45" />
+            </svg>
+          </div>
+          <div class="casestudy-content">
+            <h3>Boat Management App</h3>
+            <p class="casestudy-type">Product Design</p>
+            <p class="casestudy-description">
+              Designing a comprehensive boat management solution for vessel owners. From maintenance tracking to voyage
+              planning, simplifying maritime management.
+            </p>
+            <div class="casestudy-tags">
+              <span class="tag tag-blue">Product Design</span>
+              <span class="tag tag-green">User Research</span>
+              <span class="tag">Prototyping</span>
+            </div>
+            <span style="color: var(--ink-gray); font-style: italic;">Coming to Behance soon</span>
+          </div>
+        </article>
+
+        <!-- ChristoTalk -->
+        <article class="casestudy-card reveal reveal-delay-4">
+          <div class="casestudy-image" style="background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" stroke="#FAF8F5" stroke-width="2">
+              <path d="M40 15 L40 65" />
+              <path d="M25 30 L55 30" />
+              <circle cx="40" cy="40" r="25" stroke-dasharray="5 5" />
+            </svg>
+          </div>
+          <span class="casestudy-annotation">Faith meets tech ✨</span>
+          <div class="casestudy-content">
+            <h3>ChristoTalk</h3>
+            <p class="casestudy-type">Spiritual Guidance App</p>
+            <p class="casestudy-description">
+              A thoughtful digital space for Christian spiritual guidance. Designed with reverence and care to support
+              faith journeys through modern technology.
+            </p>
+            <div class="casestudy-tags">
+              <span class="tag tag-blue">App Design</span>
+              <span class="tag tag-green">UX Research</span>
+              <span class="tag">Accessibility</span>
+            </div>
+            <a href="https://www.behance.net/gallery/230726465/Christotalk" target="_blank" rel="noopener"
+              class="system-link-btn btn-github">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                <path
+                  d="M7.5 11c1.5 0 2.5-.8 2.5-2.2 0-1.5-1-2.3-2.5-2.3H4v4.5h3.5zM4 12.5v5h4c1.7 0 2.8-1 2.8-2.5s-1.1-2.5-2.8-2.5H4zM14 6.5h6v1.5h-6V6.5zm3 4c-2.2 0-4 1.8-4 4s1.8 4 4 4a4 4 0 003.5-2h-2c-.4.6-1 1-1.8 1-1.1 0-2-.9-2-2h6c0-2.8-1.8-5-4-5z" />
+              </svg>
+              View on Behance
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Decorative doodles -->
+    <img src="assets/doodles/arrow.svg" alt="" class="doodle"
+      style="bottom: 15%; left: 3%; width: 50px; transform: rotate(15deg);" aria-hidden="true">
+  </section>
+
+  <!-- ========== RESUME SECTION ========== -->
+  <section class="section" id="resume"
+    style="background: linear-gradient(180deg, transparent 0%, rgba(245,240,232,0.3) 100%);">
+    <div class="container">
+      <header class="section-header">
+        <h2>Resume</h2>
+        <p style="color: var(--ink-gray); margin-top: 1rem; font-size: 1.1rem;">
+          A snapshot of my journey, skills, and experience.
+        </p>
+      </header>
+
+      <div class="resume-card reveal">
+        <div class="resume-content">
+          <div class="resume-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="60" height="60">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <line x1="10" y1="9" x2="8" y2="9" />
+            </svg>
+          </div>
+          <div class="resume-info">
+            <h3>Shriya Nayyar</h3>
+            <p>Designer & Developer | UI/UX | Full Stack</p>
+            <div class="resume-highlights">
+              <span class="tag">Design</span>
+              <span class="tag">Development</span>
+              <span class="tag">AI/ML</span>
+              <span class="tag">Research</span>
+            </div>
+          </div>
+        </div>
+        <a href="assets/Shriya_Nayyar_Resume.pdf" target="_blank" rel="noopener" class="system-link-btn btn-live"
+          style="margin-top: var(--space-md);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Download Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <header class="section-header">
+        <h2>Let's Connect</h2>
+        <p style="color: var(--ink-gray); margin-top: 1rem; font-size: 1.1rem;">
+          Have a project in mind? Want to collaborate? Just say hi!
+        </p>
+      </header>
+
+      <div class="contact-content">
+        <div class="contact-links">
+          <a href="mailto:nayyarshriya825@gmail.com" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="M22 6L12 13 2 6" />
+            </svg>
+            <span>nayyarshriya825@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/shriya-nayyar-60b14a282" target="_blank" rel="noopener"
+            class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/shriiyyaa" target="_blank" rel="noopener" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.behance.net/shriyanayyar" target="_blank" rel="noopener" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 12h8M3 8h8M3 16h8" />
+              <circle cx="17" cy="12" r="4" />
+              <path d="M14 8h6" />
+            </svg>
+            <span>Behance</span>
+          </a>
+          <a href="tel:+917658885940" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span>+91-7658885940</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">
+        Designed & built with <span class="footer-heart">♥</span> by Shriya Nayyar
+      </p>
+      <p style="color: var(--ink-light); margin-top: 0.5rem; font-size: 0.9rem;">
+        © 2026 All things handcrafted
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

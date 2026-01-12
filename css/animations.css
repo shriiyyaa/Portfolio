@@ -1,0 +1,324 @@
+/* =============================================
+   ANIMATIONS & MICRO-INTERACTIONS
+   ============================================= */
+
+/* ----- Page Load Animations ----- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes drawIn {
+    from {
+        stroke-dashoffset: 1000;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* ----- Apply animations to elements ----- */
+.hero-content {
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-headline {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.hero-tagline {
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.hero-cta {
+    animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.doodle {
+    animation: fadeInScale 0.6s ease-out 1s both;
+}
+
+/* ----- Scroll reveal animations ----- */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+    transition-delay: 0.3s;
+}
+
+.reveal-delay-4 {
+    transition-delay: 0.4s;
+}
+
+/* ----- Doodle Specific Animations ----- */
+.doodle-spin {
+    animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.doodle-sway {
+    animation: sway 5s ease-in-out infinite;
+}
+
+@keyframes sway {
+
+    0%,
+    100% {
+        transform: rotate(-5deg) translateX(0);
+    }
+
+    50% {
+        transform: rotate(5deg) translateX(5px);
+    }
+}
+
+.doodle-pop {
+    animation: pop 0.5s ease-out;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+    }
+
+    70% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ----- Button hover animations ----- */
+.btn {
+    position: relative;
+}
+
+.btn:active {
+    transform: translateY(0) rotate(0);
+}
+
+/* Wobble effect on hover */
+@keyframes wobble {
+
+    0%,
+    100% {
+        transform: translateY(-2px) rotate(-1deg);
+    }
+
+    25% {
+        transform: translateY(-2px) rotate(1deg);
+    }
+
+    75% {
+        transform: translateY(-2px) rotate(-0.5deg);
+    }
+}
+
+.btn:hover {
+    animation: wobble 0.5s ease-in-out;
+}
+
+/* ----- Card animations ----- */
+.system-card,
+.casestudy-card {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.system-card:hover .system-icon,
+.casestudy-card:hover .casestudy-image svg {
+    animation: pop 0.4s ease-out;
+}
+
+/* Staggered card entrance */
+.systems-grid .system-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.systems-grid .system-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.systems-grid .system-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.systems-grid .system-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.casestudies-grid .casestudy-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.casestudies-grid .casestudy-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.casestudies-grid .casestudy-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.casestudies-grid .casestudy-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.casestudies-grid .casestudy-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+/* ----- Link hover effects ----- */
+.link-arrow {
+    position: relative;
+    overflow: hidden;
+}
+
+.link-arrow::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--ink-blue);
+    transition: width 0.3s ease;
+}
+
+.link-arrow:hover::before {
+    width: 100%;
+}
+
+/* ----- Section transitions ----- */
+.section {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+#hero {
+    animation-delay: 0s;
+    opacity: 1;
+}
+
+#systems {
+    animation-delay: 0.2s;
+}
+
+#casestudies {
+    animation-delay: 0.3s;
+}
+
+#about {
+    animation-delay: 0.4s;
+}
+
+/* ----- Smooth scroll indicator ----- */
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--ink-blue), var(--ink-green));
+    z-index: 1000;
+    transition: width 0.1s ease;
+}
+
+/* ----- Cursor trail effect (optional) ----- */
+.cursor-trail {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: var(--ink-blue);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.5;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+}
+
+/* ----- Navigation highlight ----- */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 100%;
+    height: 2px;
+    background: var(--ink-blue);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* ----- Reduced motion preference ----- */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .doodle-float,
+    .doodle-wiggle,
+    .doodle-spin,
+    .doodle-sway {
+        animation: none;
+    }
+}

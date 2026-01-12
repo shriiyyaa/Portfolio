@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" stroke="#2D2A26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Five-pointed star -->
+  <path d="M20 2 L24 14 L38 14 L27 22 L31 36 L20 28 L9 36 L13 22 L2 14 L16 14 Z" fill="#FFD93D" stroke="#2D2A26"/>
+  <!-- Sparkle lines -->
+  <path d="M20 0 L20 -3" stroke="#2D2A26" stroke-width="1"/>
+  <path d="M40 14 L43 14" stroke="#2D2A26" stroke-width="1"/>
+  <path d="M0 14 L-3 14" stroke="#2D2A26" stroke-width="1"/>
+</svg>

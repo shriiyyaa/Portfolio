@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 60" fill="none" stroke="#2D2A26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Cat body -->
+  <ellipse cx="35" cy="42" rx="22" ry="15" fill="#FAF8F5"/>
+  <!-- Cat head -->
+  <circle cx="35" cy="22" r="16" fill="#FAF8F5"/>
+  <!-- Ears -->
+  <path d="M22 12 L18 2 L26 10" fill="#FAF8F5"/>
+  <path d="M48 12 L52 2 L44 10" fill="#FAF8F5"/>
+  <!-- Inner ears -->
+  <path d="M21 10 L20 5 L24 9" fill="#FFB6C1"/>
+  <path d="M49 10 L50 5 L46 9" fill="#FFB6C1"/>
+  <!-- Eyes -->
+  <circle cx="28" cy="20" r="4" fill="#2D2A26"/>
+  <circle cx="42" cy="20" r="4" fill="#2D2A26"/>
+  <circle cx="29" cy="19" r="1.5" fill="#FAF8F5"/>
+  <circle cx="43" cy="19" r="1.5" fill="#FAF8F5"/>
+  <!-- Nose -->
+  <path d="M35 26 L32 30 L38 30 Z" fill="#FFB6C1"/>
+  <!-- Mouth -->
+  <path d="M35 30 L35 34"/>
+  <path d="M35 34 Q30 38, 28 35"/>
+  <path d="M35 34 Q40 38, 42 35"/>
+  <!-- Whiskers -->
+  <path d="M20 28 L10 26"/>
+  <path d="M20 32 L10 34"/>
+  <path d="M50 28 L60 26"/>
+  <path d="M50 32 L60 34"/>
+  <!-- Tail -->
+  <path d="M55 45 Q65 40, 62 30 Q60 25, 65 22"/>
+</svg>

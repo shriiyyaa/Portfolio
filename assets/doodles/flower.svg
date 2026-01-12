@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="none" stroke="#2D2A26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Flower petals -->
+  <ellipse cx="25" cy="12" rx="6" ry="10" fill="#FFB6C1"/>
+  <ellipse cx="38" cy="20" rx="6" ry="10" fill="#FFB6C1" transform="rotate(72 38 20)"/>
+  <ellipse cx="35" cy="35" rx="6" ry="10" fill="#FFB6C1" transform="rotate(144 35 35)"/>
+  <ellipse cx="15" cy="35" rx="6" ry="10" fill="#FFB6C1" transform="rotate(-144 15 35)"/>
+  <ellipse cx="12" cy="20" rx="6" ry="10" fill="#FFB6C1" transform="rotate(-72 12 20)"/>
+  <!-- Center -->
+  <circle cx="25" cy="25" r="8" fill="#FFD93D"/>
+  <!-- Dots in center -->
+  <circle cx="23" cy="23" r="1" fill="#2D2A26"/>
+  <circle cx="27" cy="24" r="1" fill="#2D2A26"/>
+  <circle cx="25" cy="27" r="1" fill="#2D2A26"/>
+</svg>

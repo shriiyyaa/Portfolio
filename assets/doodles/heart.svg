@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="none" stroke="#C25B5B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Heart shape -->
+  <path d="M25 45 C10 32, 2 20, 10 12 Q15 7, 25 15 Q35 7, 40 12 C48 20, 40 32, 25 45" fill="#C25B5B"/>
+  <!-- Heartbeat line -->
+  <path d="M8 28 L18 28 L22 20 L26 35 L30 25 L34 28 L42 28" stroke="#FAF8F5" stroke-width="2"/>
+  <!-- Shine -->
+  <path d="M15 16 Q18 14, 20 17" stroke="#FAF8F5" stroke-width="1"/>
+</svg>
