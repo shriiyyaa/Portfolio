@@ -209,30 +209,22 @@
 @media (max-width: 800px) {
     .systems-grid {
         grid-template-columns: 1fr;
-        gap: var(--space-lg);
-        padding: var(--space-lg) var(--space-md);
+        gap: var(--space-md);
+        padding: var(--space-md);
+        width: 100%;
     }
 
     .system-card {
-        max-width: 420px;
+        max-width: 100%;
         margin: 0 auto !important;
         min-height: auto;
+        padding: var(--space-md);
     }
 
-    .system-card:nth-child(1) {
-        transform: rotate(-1.5deg);
-    }
-
-    .system-card:nth-child(2) {
-        transform: rotate(1deg);
-    }
-
-    .system-card:nth-child(3) {
-        transform: rotate(-1deg);
-    }
-
-    .system-card:nth-child(4) {
-        transform: rotate(1.5deg);
+    /* Straighten cards on mobile for better readability */
+    .system-card:nth-child(n) {
+        transform: rotate(0deg);
+        margin-top: 0;
     }
 }
 
