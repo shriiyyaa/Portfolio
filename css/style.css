@@ -236,6 +236,11 @@ a:hover {
   border-color: var(--ink-black);
 }
 
+.btn-primary:hover::before {
+  left: -100%;
+  background: transparent;
+}
+
 /* Hand-drawn button style */
 .btn-sketchy {
   border: none;
