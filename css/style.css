@@ -371,16 +371,12 @@ a:hover {
 /* ----- Tags ----- */
 .tag {
   display: inline-block;
-  padding: 4px 10px;
-  font-size: 0.85rem;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  background: var(--paper-cream);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-small);
   color: var(--ink-dark);
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  margin: 4px;
-  letter-spacing: -0.02em;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .tag-blue {
