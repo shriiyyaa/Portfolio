@@ -244,8 +244,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.setAttribute('data-theme', 'dark');
   } else if (currentTheme == 'light') {
     document.documentElement.setAttribute('data-theme', 'light');
-  } else if (prefersDarkScheme.matches) {
-    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    // Default to light if no preference saved
+    document.documentElement.setAttribute('data-theme', 'light');
   }
 
   if (toggleBtn) {
