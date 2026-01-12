@@ -303,6 +303,34 @@
     margin-bottom: var(--space-md);
 }
 
+/* System Viz (Logic Blocks) - Restored for Product Engineer Identity */
+.system-viz {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 16px 0;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px dashed var(--ink-light);
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.75rem;
+    color: var(--ink-dark);
+}
+
+.system-viz-block {
+    background: #fff;
+    padding: 4px 8px;
+    border: 1px solid var(--ink-gray);
+    border-radius: 4px;
+}
+
+.system-viz-arrow {
+    color: var(--ink-blue);
+    font-weight: bold;
+}
+
 .system-description {
     font-size: 0.9rem;
     color: var(--ink-dark);
@@ -323,6 +351,11 @@
     font-size: 0.75rem;
     padding: 3px 10px;
     margin: 0;
+    /* Technical Look */
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: -0.02em;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .system-links {
@@ -520,8 +553,15 @@
 /* ----- Case Studies Section ----- */
 .casestudies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    /* Force 2x2 Grid for Desktop */
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
+}
+
+@media (max-width: 768px) {
+    .casestudies-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .casestudy-card {
