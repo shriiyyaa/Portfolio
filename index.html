@@ -49,12 +49,12 @@
       style="bottom: 30%; left: 5%; width: 45px;" aria-hidden="true">
 
     <div class="hero-content">
-      <h1 class="hero-headline">I build intelligent digital systems.</h1>
-      <p class="hero-tagline">
-        <span>Design</span>
-        <span>Research</span>
-        <span>AI</span>
-        <span>Engineering</span>
+      <h1 class="hero-title">
+        I design, research, and build <br>
+        <span class="highlight">intelligent digital systems.</span>
+      </h1>
+      <p class="hero-subtitle">
+        UI/UX Designer • Product Researcher • AI Systems Engineer
       </p>
 
       <!-- Decorative Arrow -->
@@ -138,16 +138,23 @@
           <h3>MoodMuse</h3>
           <p class="system-subtitle">Emotion-First Music Companion</p>
           <p class="system-description">
-            An emotion-aware music system that asks: "How do you feel right now?" Users describe their mood with text
-            and emojis, and a custom emotion engine converts this into an 8-dimensional Mood Vector. Songs are matched
-            using vector-similarity, and an Intent Layer (Stay, Lift, Distract, Surprise) adapts in real-time based on
-            skips.
+            An emotion-aware music system that asks: "How do you feel right now?" Uses tokenization, weighted keyword
+            algorithm, adapting in real-time based on skips and user intent.
           </p>
+          <div class="system-viz">
+            <span class="system-viz-block">Input</span>
+            <span class="system-viz-arrow">→</span>
+            <span class="system-viz-block">Tokenizer</span>
+            <span class="system-viz-arrow">→</span>
+            <span class="system-viz-block">Vector Space</span>
+            <span class="system-viz-arrow">→</span>
+            <span class="system-viz-block">Match</span>
+          </div>
           <div class="system-tech">
             <span class="tag tag-blue">Next.js 14</span>
-            <span class="tag tag-green">TypeScript</span>
-            <span class="tag">Zustand</span>
-            <span class="tag">YouTube API</span>
+            <span class="tag tag-green">Tokenization</span>
+            <span class="tag">Weighted Matching</span>
+            <span class="tag">Music API</span>
           </div>
           <div class="system-links">
             <a href="https://github.com/shriiyyaa/MoodMuse" target="_blank" rel="noopener"
@@ -179,16 +186,21 @@
           <h3>PortLens</h3>
           <p class="system-subtitle">AI Portfolio Evaluation Platform</p>
           <p class="system-description">
-            An AI-powered system that replaces unpaid design assignments with automated, evidence-based portfolio
-            analysis. PortLens uses a Vision Encoder + NLP Encoder fusion engine to evaluate visual design, UX
-            heuristics, and communication clarity. Designers get actionable feedback; recruiters get ranked shortlists
-            with explanations.
+            An AI-powered system that automates portfolio analysis. PortLens extracts text and visual data, using
+            recruiters get ranked candidates based on evidence, not just aesthetics.
           </p>
+          <div class="system-viz">
+            <span class="system-viz-block">PDF/URL</span>
+            <span class="system-viz-arrow">→</span>
+            <span class="system-viz-block">Vision + LLM</span>
+            <span class="system-viz-arrow">→</span>
+            <span class="system-viz-block">Analysis</span>
+          </div>
           <div class="system-tech">
             <span class="tag tag-blue">React</span>
             <span class="tag tag-green">FastAPI</span>
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">PyTorch</span>
+            <span class="tag">LLM Analysis</span>
+            <span class="tag">Portfolio Parsing</span>
           </div>
           <div class="system-links">
             <a href="https://github.com/shriiyyaa/PortLens" target="_blank" rel="noopener"
@@ -223,11 +235,18 @@
             background worker processes. Features Producer-Queue-Worker architecture, multithreading, and scalable
             design used by real production systems.
           </p>
+          <div class="system-viz">
+            <span class="system-viz-block">Producer</span>
+            <span class="system-viz-arrow">→</span>
+            <span class="system-viz-block">Redis Queue</span>
+            <span class="system-viz-arrow">→</span>
+            <span class="system-viz-block">Worker Pool</span>
+          </div>
           <div class="system-tech">
             <span class="tag tag-red">C++</span>
-            <span class="tag">Crow</span>
-            <span class="tag">Redis</span>
-            <span class="tag">CMake</span>
+            <span class="tag">Multithreading</span>
+            <span class="tag">Lock-free Structures</span>
+            <span class="tag">Task Scheduling</span>
           </div>
           <div class="system-links">
             <span class="system-link-btn btn-coming">Coming Soon</span>
@@ -247,11 +266,18 @@
             dataset, compared 5 algorithms, and selected Logistic Regression for interpretability. Deployed via
             Streamlit with probability outputs, gauge charts, and radar visualizations for explainable AI.
           </p>
+          <div class="system-viz">
+            <span class="system-viz-block">Data</span>
+            <span class="system-viz-arrow">→</span>
+            <span class="system-viz-block">Preprocessing</span>
+            <span class="system-viz-arrow">→</span>
+            <span class="system-viz-block">LogReg Model</span>
+          </div>
           <div class="system-tech">
             <span class="tag tag-blue">Python</span>
             <span class="tag tag-green">Scikit-learn</span>
+            <span class="tag">Data Preprocessing</span>
             <span class="tag">Streamlit</span>
-            <span class="tag">Plotly</span>
           </div>
           <div class="system-links">
             <span class="system-link-btn btn-coming">Coming Soon</span>
@@ -311,8 +337,7 @@
   </section>
 
   <!-- ========== CASE STUDIES SECTION ========== -->
-  <section class="section" id="casestudies"
-    style="background: linear-gradient(180deg, transparent 0%, rgba(245,240,232,0.3) 100%);">
+  <section class="section section-alt" id="casestudies">
     <div class="container">
       <header class="section-header">
         <h2>Case Studies</h2>
@@ -455,8 +480,8 @@
   </section>
 
   <!-- ========== RESUME SECTION ========== -->
-  <section class="section" id="resume"
-    style="background: linear-gradient(180deg, transparent 0%, rgba(245,240,232,0.3) 100%);">
+  <!-- ========== RESUME SECTION ========== -->
+  <section class="section section-alt" id="resume">
     <div class="container">
       <header class="section-header">
         <h2>Resume</h2>
@@ -564,11 +589,35 @@
       <p style="color: var(--ink-light); margin-top: 0.5rem; font-size: 0.9rem;">
         © 2026 All things handcrafted
       </p>
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+        <!-- Sun Icon (for Dark Mode) -->
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+        <!-- Moon Icon (for Light Mode) -->
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
     </div>
   </footer>
 
   <!-- JavaScript -->
   <script src="js/main.js"></script>
+
+  <!-- Chick Follower -->
+  <div id="chick-follower" class="cursor-follower" aria-hidden="true">
+    <img src="assets/doodles/chick.svg" alt="">
+  </div>
 </body>
 
 </html>

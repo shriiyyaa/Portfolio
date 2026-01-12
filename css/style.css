@@ -10,6 +10,7 @@
   --paper-cream: #F5F0E8;
   --paper-lines: rgba(180, 170, 160, 0.12);
   --paper-shadow: rgba(45, 42, 38, 0.06);
+  --section-bg: linear-gradient(180deg, transparent 0%, rgba(245, 240, 232, 0.3) 100%);
 
   /* Ink Colors */
   --ink-black: #2D2A26;
@@ -36,8 +37,8 @@
   --space-sm: 1rem;
   --space-md: 2rem;
   --space-lg: 3rem;
-  --space-xl: 5rem;
-  --space-xxl: 8rem;
+  --space-xl: 6rem;
+  --space-xxl: 10rem;
 
   /* Border Radius */
   --radius-sm: 8px;
@@ -46,8 +47,47 @@
   --radius-pill: 50px;
 
   /* Transitions */
-  --transition-quick: 0.2s ease;
-  --transition-smooth: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-quick: 0.3s ease;
+  --transition-smooth: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+[data-theme="dark"] {
+  --paper-bg: #121212;
+  --paper-cream: #1E1E1E;
+  --paper-lines: rgba(255, 255, 255, 0.03);
+  --paper-shadow: rgba(0, 0, 0, 0.5);
+  --section-bg: transparent;
+
+  --ink-black: #E0E0E0;
+  --ink-dark: #B0B0B0;
+  --ink-gray: #808080;
+  --ink-light: #505050;
+
+  --ink-blue: #60A5FA;
+  --ink-red: #F87171;
+  --ink-green: #4ADE80;
+}
+
+[data-theme="dark"] .doodle,
+[data-theme="dark"] .system-icon img,
+[data-theme="dark"] .experience-icon img,
+[data-theme="dark"] .btn-sketchy path {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+[data-theme="dark"] .system-viz {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--ink-gray);
+}
+
+[data-theme="dark"] .system-viz-block {
+  background: var(--paper-cream);
+  border-color: var(--ink-gray);
+}
+
+[data-theme="dark"] .tag {
+  background: var(--paper-cream);
+  border-color: var(--ink-gray);
 }
 
 /* ----- Reset & Base Styles ----- */
@@ -62,6 +102,18 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  cursor: url('../assets/doodles/cursor-mushroom.svg') 16 16, auto;
+}
+
+/* Ensure cursor persists on interactive elements */
+a,
+button,
+input,
+textarea,
+select,
+.btn,
+.card {
+  cursor: url('../assets/doodles/cursor-mushroom.svg') 16 16, pointer;
 }
 
 body {
@@ -158,6 +210,10 @@ a:hover {
 .section {
   padding: var(--space-xxl) 0;
   position: relative;
+}
+
+.section-alt {
+  background: var(--section-bg);
 }
 
 .section-header {
@@ -315,13 +371,16 @@ a:hover {
 /* ----- Tags ----- */
 .tag {
   display: inline-block;
-  padding: 4px 12px;
-  font-size: var(--font-size-small);
-  font-weight: 500;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
   color: var(--ink-dark);
-  background: rgba(74, 123, 186, 0.1);
-  border-radius: var(--radius-pill);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
   margin: 4px;
+  letter-spacing: -0.02em;
 }
 
 .tag-blue {
@@ -465,4 +524,32 @@ a:hover {
   :root {
     --space-xxl: 3rem;
   }
+}
+
+/* Dark Mode Overrides for Flat Look */
+/* Grid restored */
+
+[data-theme="dark"] .section-header h2::after {
+  background: var(--ink-blue);
+}
+
+/* More Dark Mode Flat Overrides */
+[data-theme="dark"] .card::before {
+  display: none;
+}
+
+[data-theme="dark"] .about {
+  background: none !important;
+}
+
+[data-theme="dark"] .about-photo-blob {
+  background: var(--ink-blue) !important;
+}
+
+[data-theme="dark"] .system-card {
+  background: var(--paper-cream) !important;
+}
+
+[data-theme="dark"] .contact {
+  background: none !important;
 }

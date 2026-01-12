@@ -248,6 +248,43 @@
     justify-content: center;
 }
 
+/* System Logic Visualization */
+.system-viz {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 16px 0;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px dashed var(--ink-light);
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.75rem;
+    color: var(--ink-dark);
+}
+
+.system-viz-block {
+    background: #fff;
+    border: 1px solid var(--ink-dark);
+    padding: 4px 8px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.system-viz-block,
+.system-viz-arrow {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.system-viz.visible .system-viz-block,
+.system-viz.visible .system-viz-arrow {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .system-icon img {
     width: 100%;
     height: 100%;
@@ -674,6 +711,10 @@
     background: linear-gradient(180deg, rgba(245, 240, 232, 0.3) 0%, var(--paper-bg) 100%);
 }
 
+[data-theme="dark"] .contact {
+    background: none !important;
+}
+
 .contact-content {
     display: flex;
     justify-content: center;
@@ -786,4 +827,67 @@
     .casestudy-annotation {
         display: none;
     }
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--ink-black);
+    cursor: pointer;
+    padding: 8px;
+    margin-top: 1rem;
+    transition: transform var(--transition-quick), color var(--transition-quick);
+}
+
+.theme-toggle:hover {
+    transform: rotate(15deg);
+    color: var(--ink-blue);
+}
+
+.theme-toggle svg {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-sun {
+    display: none;
+}
+
+[data-theme="dark"] .icon-sun {
+    display: block;
+}
+
+[data-theme="dark"] .icon-moon {
+    display: none;
+}
+
+/* Cursor Follower (Chick) */
+.cursor-follower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    pointer-events: none;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s;
+    will-change: transform;
+}
+
+.cursor-follower img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+[data-theme="dark"] .cursor-follower img {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/* Force removal of inline gradients in Dark Mode */
+[data-theme="dark"] .casestudy-image {
+    background: var(--paper-cream) !important;
+    border-bottom: 1px solid var(--ink-gray);
 }

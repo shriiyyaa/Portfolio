@@ -179,6 +179,138 @@ document.addEventListener('DOMContentLoaded', () => {
       activeElement.isContentEditable;
   }
 
+
+  // ========== LOGIC FLOW ANIMATION (SEQUENTIAL) ==========
+  const vizObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        const children = entry.target.querySelectorAll('.system-viz-block, .system-viz-arrow');
+        children.forEach((child, index) => {
+          child.style.transitionDelay = `${index * 150}ms`; // Staggered delay
+        });
+        vizObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.system-viz').forEach(viz => vizObserver.observe(viz));
+
+  // ========== HERO TYPEWRITER EFFECT ==========
+  const heroHighlight = document.querySelector('.hero-title .highlight');
+  if (heroHighlight) {
+    const text = "intelligent digital systems.";
+    heroHighlight.textContent = "";
+
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        heroHighlight.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 50);
+      }
+    }
+
+    setTimeout(typeWriter, 800);
+  }
+
+  // ========== MAGNETIC BUTTONS ==========
+  const magneticButtons = document.querySelectorAll('.btn');
+
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && window.innerWidth > 768) {
+    magneticButtons.forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px) rotate(${x * 0.05}deg)`;
+      });
+
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'translate(0, 0) rotate(0)';
+      });
+    });
+  }
+
+
+  // ========== DARK MODE TOGGLE ==========
+  const toggleBtn = document.getElementById('theme-toggle');
+  const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+  // Load saved theme
+  const currentTheme = localStorage.getItem('theme');
+  if (currentTheme == 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else if (currentTheme == 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  } else if (prefersDarkScheme.matches) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+      let theme = 'light';
+      if (document.documentElement.getAttribute('data-theme') !== 'dark') {
+        theme = 'dark';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    });
+  }
+
+  // ========== MUSHROOM CURSOR FOLLOWER (CHICK) ==========
+  const chick = document.getElementById('chick-follower');
+  if (chick) {
+    let mouseX = 0, mouseY = 0;
+    let chickX = 0, chickY = 0;
+    let walkCycle = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      // Opacity handled in animateChick
+    });
+
+    function animateChick() {
+      // Constant Slow Speed (Creeping)
+      const dx = mouseX - chickX;
+      const dy = mouseY - chickY;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      // Speed: 0.8px/frame (Faster creep)
+      const speed = 0.8;
+
+      // Disappear if reached target (within range) -> USER WANTS IT VISIBLE
+      // chick.style.opacity = 1; // Always visible
+      chick.style.opacity = 1;
+
+      if (distance > 1) {
+        const moveDist = Math.min(distance, speed);
+        const vx = (dx / distance) * moveDist;
+        const vy = (dy / distance) * moveDist;
+
+        chickX += vx;
+        chickY += vy;
+
+        // Walking Waddle (Quicker steps because movement is slow)
+        walkCycle += 0.2;
+        const rotation = Math.sin(walkCycle) * 12; // More tilt
+        const bounce = Math.abs(Math.sin(walkCycle * 2)) * 4;
+
+        // Face direction
+        const direction = dx > 0 ? 1 : -1;
+
+        chick.style.transform = `translate(${chickX}px, ${chickY}px) translate(-50%, -50%) scaleX(${direction}) rotate(${rotation}deg) translateY(${-bounce}px)`;
+      } else {
+        chick.style.transform = `translate(${chickX}px, ${chickY}px) translate(-50%, -50%) scaleX(${mouseX > chickX ? 1 : -1})`;
+      }
+
+      requestAnimationFrame(animateChick);
+    }
+    animateChick();
+  }
+
   // ========== CONSOLE EASTER EGG ==========
   console.log(`
   ╔═══════════════════════════════════════════════════╗
