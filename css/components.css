@@ -348,8 +348,8 @@
     letter-spacing: -0.02em;
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.15);
-    color: #444;
-    /* Dark grey for visibility on white */
+    color: #111;
+    /* Near black for maximum visibility */
 }
 
 .system-links {
